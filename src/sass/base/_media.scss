@@ -1,0 +1,32 @@
+figure {
+  margin: 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+//Sets an image as a background image
+.image-bg{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  top:0;
+  left:0;
+  z-index: -200;
+}
+
+//Overlays an area with the primary site color
+.color-overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.3;
+  z-index: -100;
+}

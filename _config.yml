@@ -1,0 +1,5 @@
+title: Site Title
+permalink: pretty
+source: ./src
+exclude: ['node_modules', 'gulpfile.js', 'package.json', 'readme.md', '/img', 'css', '_scss']
+keep_files: ['/css', '/js', '/img']

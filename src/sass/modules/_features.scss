@@ -1,0 +1,54 @@
+section.features-section-flex {
+    @include display(flex);
+    @include align-items(center);
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    text-align: center;
+    padding: 0;
+    .feature-item {
+        @include flex(1 0 20em);
+        display: block;
+        background: $light-gray;
+        border-radius: 0.2em;
+        @include pad(default);
+        margin: 0.5em;
+        img {
+            max-height: 4em;
+            margin-bottom: 1em;
+        }
+    }
+}
+@media screen and (min-width:$large-screen) {
+    section.features-section {
+        .feature-item {
+            @include flex(1 0 20em);
+        }
+    }
+}
+section.features-section {
+    @mixin grid-item-columns($columns) {
+        width: (100% / 12) * $columns;
+    }
+    .grid-items {
+        .grid-item {
+            float: left;
+            height: 20em;
+            width: 100%;
+            padding: 2em;
+            text-align: center;
+            color: $dark-gray;
+            img {
+                text-align: center;
+                max-width: 5em;
+                margin-bottom: 2em;
+            }
+            @include media($medium-screen) {
+                 @include grid-item-columns(6);
+            }
+            @include media($super-screen) {
+                 @include grid-item-columns(4);
+            }
+        }
+    }
+}

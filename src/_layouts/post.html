@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 post">
+      <h1>{{ page.title }}</h1>
+      <p class="post-meta">{{ page.date | date: "%B %-d, %Y"}}</p>
+
+      {{ content }}
+
+      <hr class="visible-xs">
+    </div>
+    <div class="col-md-4 post">
+      <div class="card-inverse">
+        <h1>Recent blog posts</h1>
+        <ul class="plain-list">
+        {% for post in site.posts | limit: 6 %}
+          <li><span class="small">{{ post.date | date: "%B %-d, %Y" }}</span><br><a href="{{ post.url }}">{{ post.title }}</a><br></li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="card-inverse hidden-xs">
+        <h1>Need to schedule a cleaning?</h1>
+        <p><a target="_blank" href="https://www.stanleysteemer.com/">Book online</a> or call our Green Bay location at 920-433-0246</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

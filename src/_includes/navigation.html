@@ -1,0 +1,15 @@
+<div id="header-wrap"><header id="navigation">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo"><img src="../img/logo.png"/ alt="logo"></a>
+    <nav class="main-nav" role="navigation">
+    <a href="javascript:void(0)" class="navigation-menu-button" id="main-nav-menu-button">MENU</a>
+      <ul id="navigation-menu" class="hidden">
+        <li class="nav-link  {% if page.url == "/" %}active{% endif %}"><a href="/">Home</a></li>
+        <li class="nav-link  {% if page.url contains "/blog" %}active{% endif %}"><a href="/blog">Blog</a></li>
+        <li class="nav-link"><a href="#">Projects</a></li>
+        <li class="nav-link"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+</div>
