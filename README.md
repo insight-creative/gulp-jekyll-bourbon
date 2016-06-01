@@ -1,6 +1,12 @@
 # gulp-jekyll-bourbon
 Node package project that lets you quickly setup and test a `Jekyll` site using `Bourbon and Neat` with `gulp`.
 
+### External Documentation
++ <a href="https://nodejs.org/en/docs/" target="_blank">Node.js</a>
++ <a href="http://bourbon.io/docs/" target="_blank">Bourbon</a>
++ <a href="http://thoughtbot.github.io/neat-docs/latest/" target="_blank">Neat</a>
++ <a href="https://jekyllrb.com/docs/home/" target="_blank">Jekyll</a>
+
 ### Installing Node.js
 Make sure you have `Node.js` installed on your computer. If not, visit <a href="https://nodejs.org/en/" target="_blank">here</a> and download the stable version.
 
