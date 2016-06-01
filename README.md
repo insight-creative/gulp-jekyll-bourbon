@@ -1,5 +1,5 @@
-# gulp-jekyll-bootstrap
-Node package project that lets you quickly setup and test a `Jekyll` site using `Bootstrap` with `gulp`.
+# gulp-jekyll-bourbon
+Node package project that lets you quickly setup and test a `Jekyll` site using `Bourbon and Neat` with `gulp`.
 
 ### Installing Node.js
 Make sure you have `Node.js` installed on your computer. If not, visit <a href="https://nodejs.org/en/" target="_blank">here</a> and download the stable version.
