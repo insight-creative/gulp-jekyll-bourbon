@@ -12,7 +12,7 @@ $(document).ready(function(){
       if(menuVisible){
         nav.css('max-height', '0em');
         menuVisible = false;
-        return
+        return;
       } else {
         nav.css('max-height', '50em');
         menuVisible = true;

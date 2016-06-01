@@ -1,41 +1,41 @@
 fieldset {
   background-color: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
+  border          : 0;
+  margin          : 0;
+  padding         : 0;
 }
 
 legend {
-  font-weight: 600;
+  font-weight  : 600;
   margin-bottom: $small-spacing / 2;
-  padding: 0;
+  padding      : 0;
 }
 
 label {
-  display: block;
-  font-weight: 600;
+  display      : block;
+  font-weight  : 600;
   margin-bottom: $small-spacing / 2;
 }
 
 input,
 select,
 textarea {
-  display: block;
+  display    : block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size  : $base-font-size;
 }
 
 #{$all-text-inputs},
 select[multiple] {
   background-color: $base-background-color;
-  border: $base-border;
-  border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
-  box-sizing: border-box;
-  margin-bottom: $small-spacing;
-  padding: $base-spacing / 3;
-  transition: border-color $base-duration $base-timing;
-  width: 100%;
+  border          : $base-border;
+  border-radius   : $base-border-radius;
+  box-shadow      : $form-box-shadow;
+  box-sizing      : border-box;
+  margin-bottom   : $small-spacing;
+  padding         : $base-spacing / 3;
+  transition      : border-color $base-duration $base-timing;
+  width           : 100%;
 
   &:hover {
     border-color: shade($base-border-color, 20%);
@@ -43,13 +43,13 @@ select[multiple] {
 
   &:focus {
     border-color: $action-color;
-    box-shadow: $form-box-shadow-focus;
-    outline: none;
+    box-shadow  : $form-box-shadow-focus;
+    outline     : none;
   }
 
   &:disabled {
     background-color: shade($base-background-color, 5%);
-    cursor: not-allowed;
+    cursor          : not-allowed;
 
     &:hover {
       border: $base-border;
@@ -61,23 +61,23 @@ textarea {
   resize: vertical;
 }
 
-[type="search"] {
+[type='search'] {
   appearance: none;
 }
 
-[type="checkbox"],
-[type="radio"] {
-  display: inline;
+[type='checkbox'],
+[type='radio'] {
+  display     : inline;
   margin-right: $small-spacing / 2;
 }
 
-[type="file"] {
+[type='file'] {
   margin-bottom: $small-spacing;
-  width: 100%;
+  width        : 100%;
 }
 
 select {
   margin-bottom: $small-spacing;
-  max-width: 100%;
-  width: auto;
+  max-width    : 100%;
+  width        : auto;
 }

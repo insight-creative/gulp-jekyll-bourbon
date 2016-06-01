@@ -3,9 +3,7 @@ $nav-height: 6em;
 $landscape-nav-height: 3em;
 $logo-height: 3em;
 $logo-max-height: 60px;
-$nav-link-padding: 1em;
-
-//Colors
+$nav-link-padding: 1em; //Colors
 $nav-background-color: #fff;
 $nav-toggle-background-color: #f0f0f0;
 $nav-toggle-border-color: #e1e1e1;
@@ -13,117 +11,135 @@ $nav-link-color: $medium-gray;
 $nav-link-hover: $primary-color;
 
 header#navigation {
-    width: 100%;
-    position: fixed;
-    background-color: white;
-    border-bottom: 1px solid #e6e6e6;
-    height: $nav-height;
-    z-index: 999;
-    @include transition-property(transform);
-    @include transition-duration(1.0s);
-    @include transition-timing-function(linear);
-    background: $nav-background-color;
-    .navigation-wrapper {
-        @include outer-container($max-width);
-        .logo {
-            float: left;
-            height: $nav-height;
-            @include display(flex);
-            @include align-items(center);
-            margin-left: 2em;
-            img {
-                max-height: $logo-height;
-            }
-        }
-        .navigation-menu-button {
-            color: $nav-link-color;
-            float: right;
-            margin: 0;
-            line-height: $nav-height;
-            margin-right: 2em;
-            font-weight: bold;
-        }
-        .navigation-menu-button:hover {
-            color: $nav-link-hover;
-        }
-        ul#navigation-menu {
-            clear: both;
-            width: 100%;
-            background: $nav-background-color;
-            margin-right: 2em;
-            position: relative;
-            max-height: 0;
-            overflow: hidden;
-            @include transition(all .6s ease);
-            li.nav-link {
-                padding-left: 0;
-                text-align: center;
-                background: $nav-toggle-background-color;
-                display: block;
-                width: 100%;
-                line-height: $nav-height;
-                border-bottom: solid 1px $nav-toggle-border-color;
-                position: relative;
-                a {
-                    color: $nav-link-color;
-                    @include transition(all 0.3s linear);
-                    display: block;
-                    position: relative;
-                }
-                a:focus,
-                a:hover {
-                    color: $nav-link-hover;
-                }
-            }
-            li.nav-link.active a {
-                color: $nav-link-hover;
-            }
-        }
+  @include transition-property(transform);
+  @include transition-duration(1s);
+  @include transition-timing-function(linear);
+  width           : 100%;
+  position        : fixed;
+  background-color: #fff;
+  border-bottom   : 1px solid #e6e6e6;
+  height          : $nav-height;
+  z-index         : 999;
+  background      : $nav-background-color;
+
+  .navigation-wrapper {
+    @include outer-container($max-width);
+
+    .logo {
+      @include display(flex);
+      @include align-items(center);
+      float      : left;
+      height     : $nav-height;
+      margin-left: 2em;
+
+      img {
+        max-height: $logo-height;
+      }
     }
+
+    .navigation-menu-button {
+      color       : $nav-link-color;
+      float       : right;
+      margin      : 0;
+      line-height : $nav-height;
+      margin-right: 2em;
+      font-weight : bold;
+    }
+
+    .navigation-menu-button:hover {
+      color: $nav-link-hover;
+    }
+
+    ul#navigation-menu {
+      @include transition(all .6s ease);
+      clear       : both;
+      width       : 100%;
+      background  : $nav-background-color;
+      margin-right: 2em;
+      position    : relative;
+      max-height  : 0;
+      overflow    : hidden;
+
+      li.nav-link {
+        padding-left : 0;
+        text-align   : center;
+        background   : $nav-toggle-background-color;
+        display      : block;
+        width        : 100%;
+        line-height  : $nav-height;
+        border-bottom: solid 1px $nav-toggle-border-color;
+        position     : relative;
+
+        a {
+          @include transition(all .3s linear);
+          color   : $nav-link-color;
+          display : block;
+          position: relative;
+        }
+
+        a:focus,
+        a:hover {
+          color: $nav-link-hover;
+        }
+      }
+
+      li.nav-link.active a {
+        color: $nav-link-hover;
+      }
+    }
+  }
 }
 @media screen and (orientation: landscape) {
-    header#navigation {
-        @include transition-property(transform);
-        @include transition-duration(.3s);
-    }
-    .nav-up {
-        @include transform(translateY(-100%));
-    }
+  header#navigation {
+    @include transition-property(transform);
+    @include transition-duration(.3s);
+  }
+
+  .nav-up {
+    @include transform(translateY(-100%));
+  }
 }
 @media screen and (min-width: $large-screen) {
-    .navigation-menu-button {
-        display: none;
-    }
-    .main-nav {
-        float: right;
-    }
-    header#navigation {
-        @include transition-property(transform);
-        @include transition-duration(.3s);
-        .navigation-wrapper {
-            position: relative;
-            ul#navigation-menu {
-                display: inline;
-                position: relative;
-                visibility: visible;
-                li.nav-link {
-                    background: transparent;
-                    display: inline;
-                    line-height: $nav-height;
-                    text-decoration: none;
-                    width: auto;
-                    margin-left: 2em;
-                    border: none;
-                    position: relative;
-                    a {
-                        display: inline;
-                        padding: 0.5em;
-                    }
-                }
-            }
+  .navigation-menu-button {
+    display: none;
+  }
+
+  .main-nav {
+    float: right;
+  }
+
+  header#navigation {
+    @include transition-property(transform);
+    @include transition-duration(.3s);
+
+    .navigation-wrapper {
+      position: relative;
+
+      ul#navigation-menu {
+        display   : inline;
+        position  : relative;
+        visibility: visible;
+
+        li.nav-link {
+          background     : transparent;
+          display        : inline;
+          line-height    : $nav-height;
+          text-decoration: none;
+          width          : auto;
+          margin-left    : 2em;
+          border         : 0;
+          position       : relative;
+
+          a {
+            display: inline;
+            padding: .5em;
+          }
         }
+      }
     }
-    .nav-up {
-        @include transform(translateY(-100%));
-    }
+  }
+
+  .nav-up {
+    @include transform(translateY(-100%));
+  }
 }

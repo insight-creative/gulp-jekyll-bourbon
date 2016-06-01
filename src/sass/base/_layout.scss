@@ -3,27 +3,37 @@ html {
 }
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 section {
   @include outer-container;
   @include pad(default);
-  margin-bottom:3em;
+  margin-bottom: 3em;
 
-    article {
-      @include span-columns(12);
-    }
+  article {
+    @include span-columns(12);
+  }
 }
 
 .container {
-  margin-left: auto;
+  margin-left : auto;
   margin-right: auto;
   @include pad(0 default);
 }

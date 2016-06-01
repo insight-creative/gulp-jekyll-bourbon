@@ -65,8 +65,8 @@
       positions = [positions[1], positions[0]];
     }
 
-    if (this.positionX != undefined) positions[0] = this.positionX.toLowerCase();
-    if (this.positionY != undefined) positions[1] = this.positionY.toLowerCase();
+    if (this.positionX !== undefined) positions[0] = this.positionX.toLowerCase();
+    if (this.positionY !== undefined) positions[1] = this.positionY.toLowerCase();
 
     self.positionX = positions[0];
     self.positionY = positions[1];

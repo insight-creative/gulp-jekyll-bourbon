@@ -1,57 +1,61 @@
 //Sets the hero section to be the full screen height and to center objects vertically and horizontally
+
 section.hero-section {
-    padding: 0;
-    color: white;
-    height: 100vh;
-    @include display(flex);
-    @include align-items(center);
-    @include justify-content(center);
-    text-align: center;
-    //Sets the background image for the hero
-    @include outer-container(80%) .image-bg {
-        background: url('http://media.idownloadblog.com/wp-content/uploads/2015/06/Wallpaper-OS-X-El-Capitan-Mac.jpg') no-repeat;
-        background-size: cover;
-    }
-    //Center the logo
-    img.logo {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 2em;
-        display: block;
-        max-height: 8em;
-    }
-    h1 {
-        text-transform: uppercase;
-        font-weight: 400;
-        display: block;
-    }
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+  padding   : 0;
+  color     : #fff;
+  height    : 100vh;
+  text-align: center;
+  //Sets the background image for the hero
+  @include outer-container(80%) .image-bg {
+    background     : url('http://media.idownloadblog.com/wp-content/uploads/2015/06/Wallpaper-OS-X-El-Capitan-Mac.jpg') no-repeat;
+    background-size: cover;
+  }
+  //Center the logo
+  img.logo {
+    margin-left  : auto;
+    margin-right : auto;
+    margin-bottom: 2em;
+    display      : block;
+    max-height   : 8em;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-weight   : 400;
+    display       : block;
+  }
 }
 //Changes logo parameters to fit better on landscape oreinted mobile screens
-@media screen and (max-width: $large-screen) and (orientation:landscape) {
-    section.hero-section {
-        img.logo {
-            margin-top: 2em;
-            max-height: 6em;
-        }
+@media screen and (max-width: $large-screen) and (orientation: landscape) {
+  section.hero-section {
+    img.logo {
+      margin-top: 2em;
+      max-height: 6em;
     }
+  }
 }
 @media screen and (min-width: $large-screen) {
-    section.hero-section {
-        img.logo {
-            max-height: 10em;
-        }
-        h1 {
-            font-size: modular-scale(2);
-        }
+  section.hero-section {
+    img.logo {
+      max-height: 10em;
     }
+
+    h1 {
+      font-size: modular-scale(2);
+    }
+  }
 }
 @media screen and (min-width: $super-screen) {
-    section.hero-section {
-        img.logo {
-            max-height: 12em;
-        }
-        h1 {
-            font-size: modular-scale(3);
-        }
+  section.hero-section {
+    img.logo {
+      max-height: 12em;
     }
+
+    h1 {
+      font-size: modular-scale(3);
+    }
+  }
 }
