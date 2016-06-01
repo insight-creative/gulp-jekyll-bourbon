@@ -25,6 +25,13 @@ npm install
 >This looks in the package.json folder and installs all of the dependencies listed into a new folder called node_modules. You should never have to edit or navigate into the node_modules folder.
 
 ## Using Gulp
+### First time setup
+The first time you setup the files on your computer run the default gulp command by typing the following command:
+```
+gulp
+```
+>This allows the files to build out so that when you run gulp serve you'll be able to see your project right away
+
 ### Browser preview with BrowserSync
 This is going to be the gulp command you use the most. Running gulp serve is going to take your working files in the `src` folder and build them out to the `_site` folder. It will also include `.min` files for your `CSS` and `JavaScript` and also reduce your image file sizes.
 ```
